@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Career-Prediction</title>
+
+  <!-- Bootstrap -->
+  <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/font-awesome.min.css')}}">
+  <link href="{{url_for('static', filename='css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/prettyPhoto.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/responsive.css')}}" rel="stylesheet">
+
+</head>
+
+<body class="homepage">
+  <header id="header">
+    <nav class="navbar navbar-fixed-top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+          <a class="navbar-brand" href="/">Get Together..</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav">
+            <li class="active"><a href="/">HOME</a></li>
+                    
+                    
+<!--                    <li class="nav-item " >-->
+<!--                      <a class="nav-link" href="{{ url_for('index1') }}">PREDICTION <span class="sr-only">(current)</span></a>-->
+<!--                  </li>-->
+                  <li class="nav-item " > <a href="/index3" target="_blank">PREDICTION  - DATA</a></li>
+                  <li class="nav-item " > <a href="/index1" target="_blank">PREDICTION  - SKILLS</a></li>
+                  <li class="nav-item " >
+                    <a href="/main" target="_blank">SKILLS</a></li>
+                  
+                      <li class="nav-item " >
+                   
+            
+          </ul>
+        </div>
+      </div>
+      <!--/.container-->
+    </nav>
+    <!--/nav-->
+
+
+
+  </header>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<section id="about-us">
+
+
+ <div class="container">
+
+      <div class="skill-wrap clearfix">
+        <div class="center wow fadeInDown">
+          <br>
+          <br>
+          <h2>Which Job-Profile best suits <span>You??</span></h2>
+          <p class="lead"></p>
+
+          
+        </div>
+
+
+      <div class="container text-center text-center">
+           <form action="{{ url_for('predict4')}}" method="post">
+            <div class="form-horizontal" role="form">
+              <center></center>
+
+
+
+                <div class="form-group">
+                    <label for="1" class="col-sm-3 control-label">Acedamic percentage in Operating Systems</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="100" name="1" placeholder="Operating System %" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="2" class="col-sm-3 control-label">Percentage in Algorithms</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="100" name="2" placeholder="Analysis of Algorithm %" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="3" class="col-sm-3 control-label">Percentage in Programming Concepts</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="100" name="3" placeholder="Avg of Java and Python %" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="4" class="col-sm-3 control-label">Percentage in Software Engineering</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="100" name="4" placeholder="Software Engineering %" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="5" class="col-sm-3 control-label">Percentage in Computer Networks</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="100" name="5" placeholder="Computer Network %" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="6" class="col-sm-3 control-label">Percentage in Electronics Subjects</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="100" name="6" placeholder="% of Electronics Subjects" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="7" class="col-sm-3 control-label">Percentage in Computer Architecture</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="100" name="7" placeholder="Computer Security %" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+
+
+                 <div class="form-group">
+                    <label for="8" class="col-sm-3 control-label">Percentage in Mathematics</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="100" name="8" placeholder="Percentage in Mathematics" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="9" class="col-sm-3 control-label">Percentage in Communication skills</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="100" name="9" placeholder="Percentage in Communication skills" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="10" class="col-sm-3 control-label">Working Hours per Day</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="20" name="10" placeholder="Hours" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="11" class="col-sm-3 control-label">Logical quotient rating</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="20" name="11" placeholder="Logical quotient rating" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="12" class="col-sm-3 control-label">No of Hackathons Attend?</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="20" name="12" placeholder="Hackathons" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="13" class="col-sm-3 control-label">Coding Skills Rating?</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="20" name="13" placeholder="Skills Rating" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="14" class="col-sm-3 control-label">Public speaking points?</label>
+                    <div class="col-sm-4">
+                        <input type="Number" min="0" max="20" name="14" placeholder="speaking points" class="form-control" autofocus required>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                <label class="col-sm-3 control-label" for="15">can work long time before system? </label>
+                <select class="col-sm-3 control-label" name="15" required>
+                  <option value="">Choose a Level</option>
+                  <option value="0">No</option>
+                  <option value="1">Yes</option>
+                  
+                </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="16">Self-learning capability?</label>
+                    <select class="col-sm-3 control-label" name="16" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                      
+                      
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label" for="17">Extra-courses did</label>
+                    <select class="col-sm-3 control-label" name="17" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                      
+                      
+                    </select>
+                  </div>
+
+
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="18" class="col-sm-3 control-label">Certification</label>
+                    
+                        <select name="18"  class="col-sm-3 control-label" required>
+                            <option value="2">Full Stack</option>
+                            <option value="6">Python</option>
+                            <option value="8">Shell Programming</option>
+                            <option value="5">Machine Learning</option>
+                            <option value="4">Information Security</option>
+                            <option value="0">App Development</option>
+                            <option value="3">Hadoop</option>
+                            <option value="7">R programming</option>
+                            <option value="1">Distro making</option>
+                        </select>
+                   
+                </div>
+
+                <div class="form-group">
+                    <label  for="19" class="col-sm-3 control-label">Workshops Attend?</label>
+                    
+                        <select name="19"  class="col-sm-3 control-label" required>
+                            <option value="0">Cloud Computing</option>
+                            <option value="1">Database Security</option>
+                            <option value="2">Data Science</option>
+                            <option value="3">Game Development</option>
+                            <option value="4">Hacking</option>
+                            <option value="5">System Designing</option>
+                            <option value="6">Testing</option>
+                            <option value="7">Web Technologies</option>
+                            
+                        </select>
+                   
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="20">Talenttests taken?</label>
+                    <select class="col-sm-3 control-label" name="20" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                      
+                      
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label" for="21">Olympiads?</label>
+                    <select class="col-sm-3 control-label" name="21" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                      
+                      
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="22" class="col-sm-3 control-label">Reading & Writing Skills</label>
+                    
+                        <select name="22"  class="col-sm-3 control-label" required>
+                            <option value="0">Execellent</option>
+                            <option value="1">Medium</option>
+                            <option value="2">Poor</option>
+                            
+                            
+                        </select>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="23">Type of job?</label>
+                    <select class="col-sm-3 control-label" name="23" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">Management</option>
+                      <option value="1">Technical</option>
+                      
+                      
+                    </select>
+                  </div>
+
+                 
+
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label" for="24">Introvert?</label>
+                    <select class="col-sm-3 control-label" name="24" required>
+                      <option value="">Choose a Level</option>
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                      
+                      
+                    </select>
+                  </div>
+
+
+
+
+                <div class="form-group">
+                    <div class="col-md-2 col-sm-offset-3">
+                        <button type="submit" class="btn btn-info">Submit</button>
+                    </div>
+                </div>
+
+                    <br>
+                    <br>
+<div style="font-size: xx-large;color: crimson; margin-top: -85%;">
+
+    {{prediction_text}}
+
+</div>
+                      
+
+
+<br>
+
+                   </div>
+            </form> <!-- /form -->
+        </div> <!-- ./container -->
+
+ </div>
+</div>
+
+</section>
+ <div class="top-bar">
+    
+    <!--/.container-->
+  </div>
+  <!--/.top-bar-->
+
+  <footer style="margin-left: 45%; margin-top: 5%;" id="footer" class="midnight-blue">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          &copy; 2023
+          
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+  <!--/#footer-->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.prettyPhoto.js"></script>
+  <script src="js/jquery.isotope.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/main.js"></script>
+   <script src = "http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src = "http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+      $(document).ready(function() {
+         function disablePrev() { window.history.forward() }
+         window.onload = disablePrev();
+         window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
+      });
+   </script>
+
+</body>
+
+</html>

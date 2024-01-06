@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Career-Prediction</title>
+
+  <!-- Bootstrap -->
+  <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/font-awesome.min.css')}}">
+  <link href="{{url_for('static', filename='css/animate.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/prettyPhoto.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/responsive.css')}}" rel="stylesheet">
+
+</head>
+
+<body class="homepage">
+  <header id="header">
+    <nav class="navbar navbar-fixed-top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+          <a class="navbar-brand" href="/">Get Together..</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav">
+            <li class="active"><a href="/">HOME</a></li>
+                    
+                    
+                    <li class="nav-item " >
+                      <a class="nav-link" href="{{ url_for('index1') }}">PREDICTION <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item " > <a href="/index3" target="_blank">PREDICTION  - DATA</a></li>
+                  <li class="nav-item " > <a href="/index1" target="_blank">PREDICTION  - SKILLS</a></li>
+                  
+                  <li class="nav-item " >
+                    <a href="/main" target="_blank">SKILLS</a></li>
+                  
+                     
+                   
+            
+          </ul>
+        </div>
+      </div>
+      <!--/.container-->
+    </nav>
+    <div class="container">
+     
+      <div class="skill-wrap clearfix">
+        <div class="center wow fadeInDown">
+          <br>
+          <br>
+          <h2>Which Job-Profile best suits <span>You??</span></h2>
+          <p class="lead"></p>
+
+          
+        </div>
+        <div class="container text-center text-center">
+          <center>
+      <div class="a">
+         <h1>The best job is:</h1>
+         {% for key, value in result.items() %}
+            <form action = "/result" method = "POST">
+               <p style="font-size: xx-large; color: darkred;">{{ value }}</p>
+            </form>
+         {% endfor %}
+      </div>
+      </center>
+   </body>
+</html>
+
+
